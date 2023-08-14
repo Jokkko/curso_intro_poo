@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Auto_1 = require("./Auto");
+const Motor_1 = require("./Motor");
+const Rueda_1 = require("./Rueda");
+const m1 = new Motor_1.Motor(1000);
+const arrayRueda = [new Rueda_1.Rueda(32), new Rueda_1.Rueda(29), new Rueda_1.Rueda(12), new Rueda_1.Rueda(30)];
+console.log('Hola mundo desde TypeScript TS');
+const ferrariRojo = new Auto_1.Auto('Ferrari', m1, arrayRueda);
+console.log(ferrariRojo);
+const lamborghiniAzul = new Auto_1.Auto('Lamborghini', m1, arrayRueda);
+console.log(lamborghiniAzul);
+lamborghiniAzul.acelerar();
+console.log(lamborghiniAzul.getModelo());
+lamborghiniAzul.setModelo('Fake Ferrari');
+console.log(lamborghiniAzul.getModelo());
